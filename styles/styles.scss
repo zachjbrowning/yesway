@@ -5,53 +5,50 @@ $font-primary-serif: "Montserrat";
 $font-primary-sans-serif: "Roboto Mono";
 
 // ==== Colors ==== //
-$primary: #763CA0;
+$primary: #808080;
 $secondary: #E65c20;
 $tertiary: #0e0f0f;
-$background: #ffffff;
+$background: #dbd2d2;
 $dark: #3a3637;
 
 // CSS vars - don't know why but you can't use sass variables with them
 :root {
-  --primary: #763CA0;
-  --primary-fade: #fd0536aa;
-  --secondary: #E65c20;
-  --tertiary: #a69658;
-  --background: #f5f4f5;
-  --dark: #3a3637;
+  --Be: #DF6A59;
+  --Belong: #F2C270;
+  --Grow: #75C3AB;
+  --Align: #58A1D9;
+  --Home: #808080;
+  --background: #eeeeee;
+  --dark: #808080;
 }
 
 // ==== Bulma globals ==== //
 $link: $primary;
 $info: $dark;
-$body-background-color: #f4f6fa;
+$body-background-color: #eeeeee;
 $family-primary: $font-primary-serif;
 $family-secondary: $font-primary-sans-serif;
 
 // Import bulma after you define variables
 @import "../node_modules/bulma/sass/utilities/_all";
-//@import "../node_modules/bulma/sass/base/_all";
-//@import "../node_modules/bulma/sass/elements/_all";
-//@import "../node_modules/bulma/sass/form/_all";
-//@import "../node_modules/bulma/sass/components/_all";
+@import "../node_modules/bulma/sass/base/_all";
+@import "../node_modules/bulma/sass/elements/_all";
+@import "../node_modules/bulma/sass/form/_all";
+@import "../node_modules/bulma/sass/components/_all";
 @import "../node_modules/bulma/sass/grid/columns.sass";
-//@import "../node_modules/bulma/sass/layout/_all";
+@import "../node_modules/bulma/sass/layout/_all";
 @import "../node_modules/bulma/sass/elements/button.sass";
 
 // Other stuff
 
+html {
+  width:100%;
+  height:100%;
+  background-color:#f0f0f0;
+}
+
 main {
-  margin-left:5rem;
-  padding:20px;
+  margin-top:4rem;
 }
 
-@media only screen and (min-width: 600px) {
-  nav {
-    width: 5rem;
-    height: 100vh;
-  }
 
-  main {
-    margin-left: 5rem;
-  }
-}

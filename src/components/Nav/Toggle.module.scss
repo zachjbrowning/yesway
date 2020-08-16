@@ -1,0 +1,42 @@
+
+/* TOGGLE CONTAINER */
+.toggleFrame {
+    position:relative;
+}
+.toggleBox {
+    position:absolute;
+    display:flex;
+    align-items: center;
+    right:1rem;
+    top:1rem;
+    height:2rem;
+    cursor: pointer;
+    .toggleBurger, .toggleBurger::before, .toggleBurger::after {
+        width:1.5rem;
+        height:0.2rem;
+        background:var(--dark);
+        border-radius:1rem;
+        transition: all 500ms ease-in-out;
+    }
+    .toggleBurger::before, .toggleBurger::after {
+        content: '';
+        position:absolute;
+    }
+    &.open .toggleBurger {
+        background:transparent;
+    }
+    &.open .toggleBurger::before {
+        transform: rotate(45deg);
+    }
+    &.open .toggleBurger::after {
+        transform: rotate(-45deg);
+    }
+}
+
+.toggleBurger::before {
+    transform:translateY(-0.6rem);
+}
+.toggleBurger::after {
+    transform:translateY(0.6rem);
+}
+

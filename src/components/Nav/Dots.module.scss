@@ -1,0 +1,60 @@
+
+
+.dotBox {
+    position:absolute;
+    top:4rem;
+    width:100%;
+    .dot {
+        position:absolute;
+        cursor: pointer;
+        border-radius:100%;
+        .iconBox {
+            position:relative;
+            svg {
+                position:absolute;
+            }
+        }
+        
+    }    
+    &.nav {
+        height:100vh;
+        & .dot:hover {
+            background-color:transparent !important;
+            transform:scale(1.2);
+            .iconBox svg {
+                transform:scale(1.2);
+            }
+            .dotText {
+                font-weight:800;
+            }
+        }
+    }
+    &.hide .dot {
+        animation : ease-in-out 1s;
+        &:hover {
+            transform:scale(2);
+        }
+    }
+
+}
+
+.dotTextBox {
+    position:relative;
+    display:flex;
+    align-items: center;
+    height:100%;
+    width:50vh;
+    .dotText {
+        position: absolute;
+        left: min(20vw, 200px);
+        font-size:3rem;
+        font-weight:500;
+        transition:all 500ms ease-in-out;
+    }
+}
+
+@keyframes pulse {
+    0% {transform : scale(1)}
+    33% {transform : scale(1.5)}
+    66% {transform : scale(1)}
+}
