@@ -13,7 +13,12 @@
                 position:absolute;
             }
         }
-        
+        .explainBox {
+            display:none;
+        }
+        &:hover .explainBox {
+            display:block;
+        }
     }    
     &.nav {
         height:100vh;

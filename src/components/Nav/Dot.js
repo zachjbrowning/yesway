@@ -44,16 +44,20 @@ export default function Dot(props) {
     }
 
     
-    return (
-        <div style={dotProps} className={styles.dot}>
-            <div className={styles.iconBox}>
-                {icons[props.id]}
-            </div>    
+    return ( <>
             <Link to={`/${props.id === "Home" ? "" : props.id.toLowerCase()}`}>
-                <div onClick={() => dispatch(nav_close())} style={hoverProps} className={styles.dotTextBox}>
-                    <div style={textProps} className={styles.dotText}>{props.id}</div>
+                <div style={dotProps} className={styles.dot}>
+                    {
+                        isNav ? <div className={styles.iconBox}>
+                            {icons[props.id]}
+                        </div>  : ""
+                    }
+                        <div onClick={() => dispatch(nav_close())} style={hoverProps} className={styles.dotTextBox}>
+                            <div style={textProps} className={styles.dotText}>{props.id}</div>
+                        </div>
                 </div>
             </Link>
-        </div>
+
+        </>
     )
 }
