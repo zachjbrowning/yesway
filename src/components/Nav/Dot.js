@@ -3,6 +3,7 @@ import styles from "./Dots.module.scss";
 
 import { useSelector, useDispatch } from "react-redux";
 import { nav_close } from "../../../lib/redux/actions/navAction";
+import { Link } from 'react-router-dom';
 
 import Home from "../Icons/Home";
 import Be from "../Icons/Be";
@@ -48,9 +49,11 @@ export default function Dot(props) {
             <div className={styles.iconBox}>
                 {icons[props.id]}
             </div>    
-            <div onClick={() => dispatch(nav_close())} style={hoverProps} className={styles.dotTextBox}>
-                <div style={textProps} className={styles.dotText}>{props.id}</div>
-            </div>
+            <Link to={`/${props.id === "Home" ? "" : props.id.toLowerCase()}`}>
+                <div onClick={() => dispatch(nav_close())} style={hoverProps} className={styles.dotTextBox}>
+                    <div style={textProps} className={styles.dotText}>{props.id}</div>
+                </div>
+            </Link>
         </div>
     )
 }

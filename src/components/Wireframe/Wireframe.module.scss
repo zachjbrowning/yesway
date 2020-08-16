@@ -1,8 +1,10 @@
-.fader {
-    transition: 500ms opacity ease-in-out,  500ms transform ease-in-out;
-    &.hide {
-        opacity:0;
-        transform:translateY(4rem);
-    }
+.main {
+    transition: all 500ms ease-in-out;
+    opacity : 0;
+    transform : translateY(4rem);
+}
 
+.show {
+    opacity : 1 !important;
+    transform : translateY(0rem) !important;
 }
